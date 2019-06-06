@@ -1,5 +1,6 @@
 package com.fdorval.spoilgot.component;
-
+//import de la classe Saion
+import com.fdorval.spoilgot.dao.model.Season;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Assert;
@@ -75,7 +76,21 @@ public class ComponentTest {
 	    @Test
 	    public void shouldReturn400ifSeasonIsNotInt() throws Exception {
 	    	//A vous de coder
-	    }
+	    	
+	    	/*Season seasontype= this.restTemplate.getForObject("http://localhost:" + port + "/season=?",
+                    Season.class);
+	    	
+	    	 
+	    	//Retourne  le code 400, BAD_REQUEST est le message renvoyer par le code 400
+	    	
+	    	if(asserThat(seasontype,!=(Integer.class)))
+	    	{
+	    	assertThat(this.restTemplate.getForEntity("http://localhost:" + port + "/kamoulox",
+	                String.class).getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
+	    	}*/
+	    	
+	    
+	    
 	    
 	    /**
 	     * l'appli doit retourner 400 si le paramètre "season" est <1
@@ -84,8 +99,10 @@ public class ComponentTest {
 	    //TODO
 	    @Test
 	    public void shouldReturn400ifSeasonIsLowerThanOne() throws Exception {
-	    	//A vous de coder
+	    
+	    
 	    }
+	    
 	    
 	    /**
 	     * l'appli doit retourner 400 si le paramètre "season" est >8
@@ -94,7 +111,7 @@ public class ComponentTest {
 	    //TODO
 	    @Test
 	    public void shouldReturn400ifSeasonIsHigherThanEight() throws Exception {
-	    	//A vous de coder
+	    	assertThat(getClass()
 	    }
 	    
 }
